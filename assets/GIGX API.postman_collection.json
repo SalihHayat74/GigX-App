@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "507dbc95-01c1-4b02-bbad-b280ac6c8c4f",
+		"name": "GIGX API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1dF9KbmJIblRzT3NTVnktVkxYQ09yX19HY1UxbjJYM1YzQnlmSFhpaWdBIn0.eyJleHAiOjE2ODExNzMwODEsImlhdCI6MTY4MTE3Mjc4MSwianRpIjoiNDQ3NGI4ZTQtN2NlNy00NmY2LTllYjctMGJjY2YwYTg1MWRjIiwiaXNzIjoiaHR0cHM6Ly9tdWJlYXBpLmFtYXAuY29ubmVjdC1idXNpbmVzcy5uZXQvYXV0aC9yZWFsbXMvTXVsdGlicmFuZEFQSSIsImF1ZCI6WyJnYXRla2VlcGVyIiwibWJjcy1jdXN0b21lcnMtbXMiLCJhY2NvdW50Il0sInN1YiI6IjJmYTQ3MDNkLTA3ZGYtNGQyMC05OWM2LTVkZWY3YmYxZGVmZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1mYW1vdG8tNjg3OTM0NjUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtbXVsdGlicmFuZGFwaSIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJnYXRla2VlcGVyIjp7InJvbGVzIjpbImVkaXQtc2VydmljZWFjdGl2YXRpb24iLCJyZWFkLWNvbXBhdGliaWxpdGllcyIsInJlYWQtc2VydmljZXMiLCJyZWFkLWxpY2Vuc2VzIiwicmVhZC12ZWhpY2xlIiwiY29tcG9zaXRlLXZlaGljbGUtdmVyaWZpY2F0aW9uIiwiZWRpdC12ZWhpY2xlIl19LCJtYmNzLWN1c3RvbWVycy1tcyI6eyJyb2xlcyI6WyJGTEVFVF9DT05TRU5UX1NUQU5EQVJEIl19LCJtZmFtb3RvLTY4NzkzNDY1Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudElkIjoibWZhbW90by02ODc5MzQ2NSIsImNsaWVudEhvc3QiOiIxMjcuMC4wLjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbWZhbW90by02ODc5MzQ2NSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.ijF7J7LHN_d6_Hl2n8moXbPioIK_08E9avhtH6OD4K7guNxRXFt0x68ZNL8PQsY8RAQ7IL5KtEUDaj8U-t1OGZC9gvOiFqqaRk17xRRLkIlPKocR9Jo88jxNl36jNSWe7ywrsl31pOlw8494NfHogpcYBaB9Bq0vNurt8OIK5lioeK24s12W-VL2Hs-am8HCooicfSQOFSwIMeBGnrm8utdhHnl5Na5W9QmEawrf8E7TS7fQkvf0N4PqJxtcMdhNFjCW7EnAnR7_l4wq4GU5jZC6n-bUXFLBruQHeOQI2flYOMg68nYXCrYEqvAm1xoB8yfPtVR4XqaElzmmrJn6bA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test@email.com"
+								},
+								{
+									"key": "password",
+									"value": "passwordpa"
+								},
+								{
+									"key": "secret",
+									"value": "{{secret}}"
+								},
+								{
+									"key": "name",
+									"value": "Test Man",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/api/signup",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1dF9KbmJIblRzT3NTVnktVkxYQ09yX19HY1UxbjJYM1YzQnlmSFhpaWdBIn0.eyJleHAiOjE2ODExNzMwODEsImlhdCI6MTY4MTE3Mjc4MSwianRpIjoiNDQ3NGI4ZTQtN2NlNy00NmY2LTllYjctMGJjY2YwYTg1MWRjIiwiaXNzIjoiaHR0cHM6Ly9tdWJlYXBpLmFtYXAuY29ubmVjdC1idXNpbmVzcy5uZXQvYXV0aC9yZWFsbXMvTXVsdGlicmFuZEFQSSIsImF1ZCI6WyJnYXRla2VlcGVyIiwibWJjcy1jdXN0b21lcnMtbXMiLCJhY2NvdW50Il0sInN1YiI6IjJmYTQ3MDNkLTA3ZGYtNGQyMC05OWM2LTVkZWY3YmYxZGVmZiIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1mYW1vdG8tNjg3OTM0NjUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtbXVsdGlicmFuZGFwaSIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJnYXRla2VlcGVyIjp7InJvbGVzIjpbImVkaXQtc2VydmljZWFjdGl2YXRpb24iLCJyZWFkLWNvbXBhdGliaWxpdGllcyIsInJlYWQtc2VydmljZXMiLCJyZWFkLWxpY2Vuc2VzIiwicmVhZC12ZWhpY2xlIiwiY29tcG9zaXRlLXZlaGljbGUtdmVyaWZpY2F0aW9uIiwiZWRpdC12ZWhpY2xlIl19LCJtYmNzLWN1c3RvbWVycy1tcyI6eyJyb2xlcyI6WyJGTEVFVF9DT05TRU5UX1NUQU5EQVJEIl19LCJtZmFtb3RvLTY4NzkzNDY1Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudElkIjoibWZhbW90by02ODc5MzQ2NSIsImNsaWVudEhvc3QiOiIxMjcuMC4wLjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbWZhbW90by02ODc5MzQ2NSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.ijF7J7LHN_d6_Hl2n8moXbPioIK_08E9avhtH6OD4K7guNxRXFt0x68ZNL8PQsY8RAQ7IL5KtEUDaj8U-t1OGZC9gvOiFqqaRk17xRRLkIlPKocR9Jo88jxNl36jNSWe7ywrsl31pOlw8494NfHogpcYBaB9Bq0vNurt8OIK5lioeK24s12W-VL2Hs-am8HCooicfSQOFSwIMeBGnrm8utdhHnl5Na5W9QmEawrf8E7TS7fQkvf0N4PqJxtcMdhNFjCW7EnAnR7_l4wq4GU5jZC6n-bUXFLBruQHeOQI2flYOMg68nYXCrYEqvAm1xoB8yfPtVR4XqaElzmmrJn6bA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sabin2@efleetpass.com.au"
+								},
+								{
+									"key": "password",
+									"value": "passwordpa"
+								},
+								{
+									"key": "secret",
+									"value": "{{secret}}"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/api/login",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ICO Stage Data",
+			"item": [
+				{
+					"name": "Minimal Stage Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/stage?secret={{secret}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"stage"
+							],
+							"query": [
+								{
+									"key": "secret",
+									"value": "{{secret}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Full Stage Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/stage/full?secret={{secret}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"stage",
+								"full"
+							],
+							"query": [
+								{
+									"key": "secret",
+									"value": "{{secret}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Current Prices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/api/price?secret={{secret}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"price"
+							],
+							"query": [
+								{
+									"key": "secret",
+									"value": "{{secret}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active Bonus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://token.gigxcoin.net/api/bonus?secret=ZE7EDFlxRz8RJIGKbhbY7qrG",
+							"protocol": "https",
+							"host": [
+								"token",
+								"gigxcoin",
+								"net"
+							],
+							"path": [
+								"api",
+								"bonus"
+							],
+							"query": [
+								{
+									"key": "secret",
+									"value": "ZE7EDFlxRz8RJIGKbhbY7qrG"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Information",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/me?secret={{secret}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"me"
+							],
+							"query": [
+								{
+									"key": "secret",
+									"value": "{{secret}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get KYC Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/api/kyc-status?secret={{secret}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"kyc-status"
+							],
+							"query": [
+								{
+									"key": "secret",
+									"value": "{{secret}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User KYC",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "secret",
+									"value": "{{secret}}",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Man",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "telegram",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "Australia",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "NSW",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Sydney",
+									"type": "text"
+								},
+								{
+									"key": "zip",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "address_1",
+									"value": "5 George Street",
+									"type": "text"
+								},
+								{
+									"key": "address_2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "wallet_address",
+									"value": "0x5xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+									"description": "Wallet Address of the User from MetaMask or any other wallet",
+									"type": "text"
+								},
+								{
+									"key": "wallet_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "documentType",
+									"value": "driving",
+									"description": "driving,passport,nidcard",
+									"type": "text"
+								},
+								{
+									"key": "document_one",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "document_image_hand",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "document_two",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/api/kyc",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"api",
+								"kyc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buy Token",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": "9|lwDsdVpmeQ6toaJHW611KUzVscxP6VWnEFXjZ5n1"
+		},
+		{
+			"key": "api_url",
+			"value": "http://localhost:7000"
+		},
+		{
+			"key": "secret",
+			"value": "7r1VRn8iaybZGheMP9ps8LWa"
+		}
+	]
+}
